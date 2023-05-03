@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# World-help
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+World Help is an application for connecting donors to reputable charities. Users can browse through charities and contribute to their favorites by creating a Donor profile and making a donation pledge.
 
-## Available Scripts
+List of features
+Look through logos and names of charities
+Button to update donors/ pledges
+Button to delete donors/ pledges
+create donors/ pledges
+View details of each charity
+View total donations of charities
+-View donation efficiency
 
-In the project directory, you can run:
+#How to use
+Welcome to World-help, listed below is a template on how to use our website:
 
-### `npm start`
+Home Page: Entering our website you should see a list of charity organizations. You can select an organization by clicking on the organizations logo to donate/pledge too. This will lead you to the charity page. You should also see a sign in or sign up button where you can sign in or sign up to become a donor. Each page will lead you to either the sign in sign up pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Sign up Page: This is where you will make an account. You will need to enter your name, email and make a password to create an account. Once you input your name, email and password and click sign up, your account will be created and you will be signed in. This will also lead you to the home page where you can choose a charity to make a pledge.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sign in Page: This is where you will sign into your account. You will need to input your email and password. Once you click sign-in you will be lead back to the homepage. The homepage will also show a sign out button where you can in-fact sign out.
 
-### `npm test`
+Charity Page: The charity page first displays, the name of the organization, the category, the total revenue, the fundraising effieceny, charitable commitment and a the organizations mission statement. The charity page will display all the pledges that were made to that specific organization. Each charity page will have a create pledge button where donors can make a pledge if they or signed in. The charity page will also display a update and delete button next to their pledges, where the donor can edit their specific pledge or delete it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##CRUD Functionality
+This app we will have full CRUD functionally which includes
 
-### `npm run build`
+-Creating donor profiles
+-Updating pledge amounts
+-Deleting pledge details
+-Donors can browse cause category, fundraising efficiency, and charitable commitment
+-Ability to search through all charities
+-Planned features
+-Sign-in, signup page
+-Password authentication
+-Post function: donors can make posts on page for public to see
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Acknowledgements
+Forbes.com for database information.
