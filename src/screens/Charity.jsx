@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
 import { getPledges, createPledge } from '../services/pledges.js';
@@ -52,24 +52,28 @@ export default function Charity(props) {
   return (
   <>  
     <div className="charity-container">
-      <div className="top-container">
-        <h1>{charity.name}</h1>
-        <p>{charity.mission_statement}</p>
+      <div className="image-container">
+        <img src={charity.logo} alt="charity logo" />
+      </div>
+      <div className="name-container">
+        {/* <h1>{charity.name}</h1> */}
+        <h2>Mission Statement:</h2>
+        <p>{charity.mission_statements}</p>
       </div>
       <div className="left-container">
         <div className='charityInfo'>
-          <p>Mission Statement: {charity.mission_statements}</p>
-          <p>Cause Category: {charity.category}</p>
+          <p>Cause: {charity.category}</p>
           <p>Private Donations: {charity.private_donations}</p>
           <p>Total Revenue: {charity.total_revenue}</p>
           <p>Fundrising Efficiency: {charity.fundraising_efficiency}%</p>
           <p>Charitable Commitments: {charity.charitable_commitment}%</p>
-          <p>Click the link below to donate!</p>
+          <p>Click below to donate!<br />
           <a href={charity.website}>{charity.website}</a>
+          </p>
         </div>
       </div>
 
-      <div className="right-container">
+      <div className="right-top-container">
         <div className='Pledges'>
           <header>Pledges</header>
             {user ? (
@@ -84,14 +88,14 @@ export default function Charity(props) {
              )
             }
        </div>
-       <div className="bottom-right-container">
+    </div>
+       <div className="right-bottom-container">
         <div>World-Help User Pledges</div>
         <div>{filteredPledges.map((pledge) => (
           <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges} setToggle={setToggle}/>
         ))}
        </div>
       </div>
-    </div>
   </div>
 </>
 )}
