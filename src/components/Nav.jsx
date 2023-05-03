@@ -5,10 +5,13 @@ export default function Nav(props) {
 
   return (
     <nav>
-      <div className="home">
-        <NavLink to="/">Home</NavLink>
-      </div>
-      <div className="sign-in/out">
+        <div className="page-header">
+
+            <div className="home">
+                <NavLink to="/">Home</NavLink> 
+            </div>
+
+        <div className="sign-in/out">
         {user ? (
           <>
             <div>Welcome back {user.name}</div>
@@ -20,7 +23,10 @@ export default function Nav(props) {
             <NavLink to="/sign-in">Sign In</NavLink>
           </>
         )}
-      </div>
+          </div>
+
+        </div> 
+        
     </nav>
   );
 }
