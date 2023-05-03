@@ -1,20 +1,23 @@
-import axios from "axios";
+import axios from 'axios'
 
-let apiUrl;
-
-const apiUrls = {
-//   production: "",
-  development: "http://127.0.0.1:3000/World-help",
-};
-
-if (window.location.hostname === "localhost") {
-  apiUrl = apiUrls.development;
-} else {
-  apiUrl = apiUrls.production;
+const getToken = () => {
+    return new Promise(resolve => {
+        resolve(`Bearer ${localStorage.getItem('token') || null}`)
+    })
 }
 
 const api = axios.create({
-  baseURL: apiUrl,
+    baseURL: process.env.NODE_ENV === 'production'
+        ? 'https://world-help-app.herokuapp.com/world-help/'
+        : 'http://localhost:3000/World-help/'
+})
+
+api.interceptors.request.use(async function (config) {
+    config.headers['Authorization'] = await getToken()
+    return config
+}, function (error) {
+    console.log('Request error: ', error)
+    return Promise.reject(error)
 });
 
-export default api;
+export default api

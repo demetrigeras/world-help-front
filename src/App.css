@@ -1,38 +1,167 @@
+
 .App {
   text-align: center;
+  background-image: cover;
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homescreen, .header, .title {
+  background-image: url("https://cdn.wallpapersafari.com/71/23/jbFrIq.jpg");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.charities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 3%;
+  background-color: rgb(255, 255, 255);
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  object-fit:contain;
+  padding: 5%;
+}
+
+.world-help-logo {
+  width: 75px;
+  height: 75px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  object-fit:contain ;
+}
+
+/* ------Charity.jsx------- */
+
+.charity-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+  height: 100vh;
+  margin: 3%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  grid-area: 1 / 1 / 2 / 2;
+  border: 1px solid black;
+}
+
+.image-container img {
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  object-fit:contain;
+}
+
+.top-container {
+  border: 1px solid black;
+}
+
+.left-container {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.right-container {
+  border: 1px solid black;
+  align-items: center;
+}
+
+.name-container { 
+  grid-area: 1 / 2 / 2 / 5;
+  border: 1px solid black; 
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+
+}
+.left-container { 
+  display: flex;
+  grid-area: 2 / 1 / 4 / 2; 
+  border: 1px solid black; 
+}
+.right-top-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 2 / 2 / 3 / 5;
+  border: 1px solid black; 
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+
+}
+.right-bottom-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  grid-area: 3 / 2 / 4 / 5;
+  border: 1px solid black;  
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+
+}
+
+.charityInfo {
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  border: 1px solid black;
+  width: fit-content;
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.browse-button {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.browse-button button {
+  background-color: #e31b1b;
+  border: none;
+  border-radius: 5%;
   color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block; 
+  margin-right: 10px; 
+  cursor: pointer; 
 }
 
-.App-link {
-  color: #61dafb;
+.browse-button button:hover {
+  background-color: #830f0f; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
