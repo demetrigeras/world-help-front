@@ -87,11 +87,11 @@
   object-fit:contain;
   padding: 5%;
 }
-
 .logo-container:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
+
 
 .browse-button {
   display: flex;
@@ -100,7 +100,7 @@
 }
 
 .browse-button button {
-  background-color: #e31b1b;
+  background-color: rgb(73, 132, 241, 0.7);
   border: 1px solid white;
   border-radius: 5%;
   color: white;
@@ -110,14 +110,13 @@
   display: inline-block; 
   margin-right: 10px; 
   cursor: pointer;
-   
 }
 
 .browse-button button:hover {
-  background-color: #b51515;
+  background-color: rgb(19, 56, 132);
   color: #fff;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid white;
   border-radius: 5px;
 }
 
@@ -127,12 +126,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  column-gap: 5px;
+  column-gap: 3px;
   row-gap: 5px;
   height: 100vh;
   margin: 3%;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 8px;
+  margin-top: 5px;
 }
 
 .charity-screen-top-parent {
@@ -140,18 +140,19 @@
   border: 1px solid black;
   border-radius: 8px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   object-fit: contain;
-  margin: 3%;
-
 }
 
 .charity-screen-top-parent img {
-  width: 200px;
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
   align-items: center;
   object-fit:contain;
-  padding: 5%;
 }
 
 .left-parent {
@@ -193,15 +194,170 @@
   display: flex;
   flex-direction: column;
 }
+
 /* --------Pledge.jsx------- */
 
 .inputButtonContainer {
   display: flex;
+  align-items: center;
   justify-content: center;
-
-
+  align-self: center;
+  gap: 6px;
   margin-bottom: 20px;
+  }
+
+
+/* media queries */
+
+/* laptop screen */
+@media (max-width: 768px) {
+  .charity-screen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    height: 100vh;
+    margin: 3%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .charity-screen-top-parent {
+    grid-area: 1 / 1 / 2 / 4;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    margin: 3%;
+  }
+  
+  .charity-screen-top-parent img {
+    width: 200px;
+    height: 150px;
+    align-items: center;
+    object-fit:contain;
+    padding: 5%;
+  }
+  
+  .left-parent {
+    grid-area: 2 / 1 / 4 / 2;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3%;
+  }
+  
+  .pledge-log-container {
+    grid-area: 2 / 2 / 4 / 3;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+    padding-top: 2%;
+  }
+  
+  .Pledges {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;;
+    padding: 3%;
+  }
+  
+  .charityInfo {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+  }
+  
+  .pledge-log-container {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+    contain: content;
+    display: flex;
+    flex-direction: column;
+  }
 }
+/* phone screen */
+@media (max-width: 480px) {
+  .charity-screen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    height: 100vh;
+    margin: 3%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .charity-screen-top-parent {
+    grid-area: 1 / 1 / 2 / 4;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    margin: 3%;
+  }
+  
+  .charity-screen-top-parent img {
+    width: 200px;
+    height: 150px;
+    align-items: center;
+    object-fit:contain;
+    padding: 5%;
+  }
+  
+  .left-parent {
+    grid-area: 2 / 1 / 4 / 2;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3%;
+  }
+  
+  .pledge-log-container {
+    grid-area: 2 / 2 / 4 / 3;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+    padding-top: 2%;
+  }
+  
+  .Pledges {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;;
+    padding: 3%;
+  }
+  
+  .charityInfo {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+  }
+  
+  .pledge-log-container {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3%;
+    contain: content;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
 
 .browse-button button {
   background-color: #e31b1b;
@@ -256,3 +412,10 @@
 
   
 }
+.form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
