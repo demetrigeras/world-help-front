@@ -186,12 +186,15 @@ p {
 .box {
   background-color:white;
   height: 49vh;
-  width: 30vh;
+  width: 45vh;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center; 
   font-size: medium;
+  border-radius: 30px;
+  border: 1px solid black;
+
   
 }
 
