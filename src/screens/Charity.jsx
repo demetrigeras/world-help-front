@@ -51,31 +51,20 @@ export default function Charity(props) {
 
   return (
   <>  
-    <div className="charity-container">
-      <div className="image-container">
-        <img src={charity.logo} alt="charity logo" />
-      </div>
-      <div className="name-container">
-        {/* <h1>{charity.name}</h1> */}
-        <h2>Mission Statement:</h2>
-        <p>{charity.mission_statements}</p>
-      </div>
-      <div className="left-container">
-        <div className='charityInfo'>
-          <p>Cause: {charity.category}</p>
-          <p>Private Donations: {charity.private_donations}</p>
-          <p>Total Revenue: {charity.total_revenue}</p>
-          <p>Fundrising Efficiency: {charity.fundraising_efficiency}%</p>
-          <p>Charitable Commitments: {charity.charitable_commitment}%</p>
-          <p>Click below to donate!<br />
-          <a href={charity.website}>{charity.website}</a>
-          </p>
-        </div>
+   <div className="charity-screen-full">
+    <div className="charity-screen-grid">
+
+      <div className="charity-screen-top-parent"> 
+      <img className={charity.name} src={charity.logo} alt="charity logo" />
+
+      <h2>{charity.name}</h2>
+      <p>{charity.mission_statements}</p>
       </div>
 
-      <div className="right-top-container">
+    <div className="left-parent">
         <div className='Pledges'>
-          <header>Pledges</header>
+
+          <header>Make a pledge!</header>
             {user ? (
               <form onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
@@ -88,14 +77,26 @@ export default function Charity(props) {
              )
             }
        </div>
+        <div className='charityInfo'>
+          <p>Cause: {charity.category}</p>
+          <p>Private Donations: {charity.private_donations}</p>
+          <p>Total Revenue: {charity.total_revenue}</p>
+          <p>Fundrising Efficiency: {charity.fundraising_efficiency}%</p>
+          <p>Charitable Commitments: {charity.charitable_commitment}%</p>
+          <p>Click below to donate!<br />
+          <a href={charity.website}>{charity.website}</a>
+          </p>
+        </div>
     </div>
-       <div className="right-bottom-container">
-        <div>World-Help User Pledges</div>
+
+       <div className="pledge-log-container">
+        <div>Pledge Log</div>
         <div>{filteredPledges.map((pledge) => (
           <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges} setToggle={setToggle}/>
         ))}
        </div>
       </div>
   </div>
+</div> 
 </>
 )}

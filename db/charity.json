@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Feeding America",
+    "category": "Domestic Needs",
+    "private_donations": "$4.06 B",
+    "total_revenue": "$4.21 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 99,
+    "website": "https://www.feedingamerica.org/",
+    "logo": "https://www.feedingamerica.org/themes/custom/ts_feeding_america/images/svgs/logo-2020.svg",
+    "mission_statements": "To advance change in America by ensuring equitable access to nutritious food for all in partnership with food banks, policymakers, supporters, and the communities we serve."
+  },
+  {
+    "name": "United Way Worldwide",
+    "category": "Domestic Needs",
+    "private_donations": "$2.77 B",
+    "total_revenue": "$3.89 B",
+    "fundraising_efficiency": 88,
+    "charitable_commitment": 85,
+    "website":"https://www.unitedway.org/",
+    "logo": "https://www.unitedway.org/assets/img/new-logo.svg",
+    "mission_statements": "Empowering Human Trafficking Survivors #MYFREEDOMDAY"
+  },
+  {
+    "name": "St. Jude Children's Research Hospital",
+    "category": "Medical",
+    "private_donations": "$2.42 B",
+    "total_revenue": "$2.33 B",
+    "fundraising_efficiency": 85,
+    "charitable_commitment": 69,
+    "website": "https://www.stjude.org/",
+    "logo":"https://1000logos.net/wp-content/uploads/2023/03/St.-Jude-logo.png",
+    "mission_statements": "To advance cures, and means of prevention, for pediatric catastrophic diseases through research and treatment."
+  },
+  {
+    "name": "Salvation Army",
+    "category": "Domestic Needs",
+    "private_donations": "$2.34 B",
+    "total_revenue": "$5.79 B",
+    "fundraising_efficiency": 90,
+    "charitable_commitment": 82,
+    "website": "https://www.salvationarmyusa.org/usn/",
+    "logo":"https://www.salvationarmyusa.org/templates/symphony/static_resources/images/global/shield.svg",
+    "mission_statements": "To preach the gospel of Jesus Christ and to meet human needs in His name without discrimination."
+  },
+  {
+    "name": "Direct Relief",
+    "category": "International Needs",
+    "private_donations": "$2.21 B",
+    "total_revenue": "$2.22 B",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 100,
+    "website": "https://www.directrelief.org/",
+    "logo":"https://i0.wp.com/www.directrelief.org/wp-content/uploads/2021/04/DirectRelief_Logomark_RGB.png?ssl=1",
+    "mission_statements": "To improve the health and lives of people affected by poverty or emergency situations by providing essential medical resources needed for their care."
+  },
+  {
+    "name": "Good 360",
+    "category": "International Needs",
+    "private_donations": "$1.68 B",
+    "total_revenue": "$1.69 B",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 100,
+    "website": "https://good360.org/",
+    "logo":"https://good360.org/wp-content/uploads/2018/02/logo.png",
+    "mission_statements": "To transform lives by providing hope, dignity, and a sense of renewed possibility to individuals, families, and communities impacted by disasters or other challenging life circumstances who, without us, would struggle to find that hope."
+  },
+  {
+    "name": "Goodwill Industries International",
+    "category": "Domestic Needs",
+    "private_donations": "$1.44 B",
+    "total_revenue": "$7.41 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 89,
+    "website": "https://www.goodwill.org/",
+    "logo":"https://www.goodwill.org/wp-content/uploads/2019/06/cropped-Goodwill-Industries-International-Logo-1.jpg",
+    "mission_statements": "To enhance the dignity and quality of life of individuals and families by strengthening communities, eliminating barriers to opportunity, and helping people in need reach their full potential through learning and the power of work."
+  },
+  {
+    "name": "YMCA of the USA",
+    "category": "Youth",
+    "private_donations": "$1.41 B",
+    "total_revenue": "$7.44 B",
+    "fundraising_efficiency": 90,
+    "charitable_commitment": 84,
+    "website": "https://www.ymca.org/",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/New_YMCA_of_the_USA_logo.png/200px-New_YMCA_of_the_USA_logo.png",
+    "mission_statements": "To put Christian principles into practice through programs that build healthy spirit, mind and body for all"
+  },
+  {
+    "name": "Habitat for Humanity International",
+    "category": "International Needs",
+    "private_donations": "$1.27 B",
+    "total_revenue": "$2.13 B",
+    "fundraising_efficiency": 88,
+    "charitable_commitment": 83,
+    "website": "https://www.habitat.org/",
+    "logo":"https://1000logos.net/wp-content/uploads/2020/09/Habitat-For-Humanity-Logo.png",
+    "mission_statements": "To bring communities together to help families build strength, stability and self-reliance through shelter."
+  },
+  {
+    "name": "Americares",
+    "category": "International Needs",
+    "private_donations": "$1.22 B",
+    "total_revenue": "$1.24 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 98,
+    "website": "https://www.americares.org/",
+    "logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFbLgRqfgavUm2roj1uYZ7ca2J_gSv2nnNqtOXo0w&s",
+    "mission_statements": "To prevent disease and promote good health in vulnerable communities"
+  },
+  {
+    "name": "Boys & Girls Clubs of America",
+    "category": "Youth",
+    "private_donations": "$1.18 B",
+    "total_revenue": "$2.48 B",
+    "fundraising_efficiency": 89,
+    "charitable_commitment": 80,
+    "website": "https://www.bgca.org/",
+    "logo":"https://www.bgca.org/-/media/bgca_logo.ashx",
+    "mission_statements": "https://www.bgca.org/-/media/bgca_logo.ashx"
+  },
+
+  {
+    "name": "Compassion International",
+    "category": "International Needs",
+    "private_donations": "$1.14 B",
+    "total_revenue": "$1.15 B",
+    "fundraising_efficiency": 89,
+    "charitable_commitment": 82,
+    "website": "https://www.compassion.com/",
+    "logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi68pWHxXIxg7l-Q7HZ-riIuPQ4OowiwBp0_p_38yz9w&s",
+    "mission_statements": "Releasing children from poverty in Jesus' name."
+  },
+  {
+    "name": "The Trevor Project",
+    "category": "Domestic Needs",
+    "private_donations": "$53.8 M",
+    "total_revenue": "$58.9 M",
+    "fundraising_efficiency": 91,
+    "charitable_commitment": 99,
+    "website": "https://www.thetrevorproject.org/",
+    "logo":"https://www.thetrevorproject.org/wp-content/uploads/2021/09/METADATA_IMG_ORANGE-BG.jpg",
+    "mission_statements": "Building a safer, more inclusive world."
+  },
+  {
+    "name": "Samaritan's Purse",
+    "category": "Domestic Needs",
+    "private_donations": "$953 M",
+    "total_revenue": "$1.01 B",
+    "fundraising_efficiency": 94,
+    "charitable_commitment": 85,
+    "website": "https://www.samaritanspurse.org/our-ministry/broadcast-ads/?utm_source=Ggl&utm_medium=cpc&utm_campaign=m_YGGM-B23V&utm_content=BroadcastAdsLP&gad=1&gclid=CjwKCAjwxr2iBhBJEiwAdXECw3apMJGjlMi4yOkDszauytqKQd1ECkuyZuOQL35mYi0379-tUnvphBoCZ8YQAvD_BwE",
+    "logo":"https://upload.wikimedia.org/wikipedia/commons/e/e6/SamaritansPurse-Logo.svg",
+    "mission_statements": "Samaritan's Purse goes to the aid of the world's poor, sick, and suffering, helping meet needs of people who are victims of war, poverty, natural disasters, disease, and famine with the purpose of sharing God's love through His Son, Jesus Christ."
+  },
+  {
+    "name": "Nature Conservancy",
+    "category": "Environment/Animal",
+    "private_donations": "$884 M",
+    "total_revenue": "$1.83 B",
+    "fundraising_efficiency": 86,
+    "charitable_commitment": 68,
+    "website": "https://www.nature.org/en-us/",
+    "logo":"https://www.nature.org/content/dam/tnc/nature/en/logos/tnc-logo-primary-registered-dark-text.svg",
+    "misson_statements": "to conserve the lands and waters on which all life depends."
+  },
+  {
+    "name": "World Vision",
+    "category": "International Needs",
+    "private_donations": "$882 M",
+    "total_revenue": "$1.31 B",
+    "fundraising_efficiency": 92,
+    "charitable_commitment": 90,
+    "website": "https://www.worldvision.org/",
+    "logo":"https://wvusstatic.com/images/wv-logo-web.svg",
+    "mission_statements": "To follow our Lord and Savior Jesus Christ in working with the poor and oppressed to promote human transformation, seek justice, and bear witness to the good news of the Kingdom of God."
+  },
+  {
+    "name": "Food for the Poor",
+    "category": "International Needs",
+    "private_donations": "$837 M",
+    "total_revenue": "$857 M",
+    "fundraising_efficiency": 95,
+    "charitable_commitment": 94,
+    "website": "https://foodforthepoor.org/",
+    "logo":"https://foodforthepoor.org/wp-content/uploads/fftp-logo.svg",
+    "mission_statements": "To link the church of the First World with the church of the Third World in a manner that helps both the materially poor and the poor in spirit. "
+  },
+  {
+    "name": "American National Red Cross",
+    "category": "Domestic Needs",
+    "private_donations": "$835 M",
+    "total_revenue": "$3.39 B",
+    "fundraising_efficiency": 80,
+    "charitable_commitment": 91,
+    "website": "https://www.redcross.org/",
+    "logo":"https://www.redcross.org/content/dam/redcross/imported-images/redcross-logo.png.img.png",
+    "misson_statements": "prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors."
+  },
+  {
+    "name": "MAP International",
+    "category": "International Needs",
+    "private_donations": "$819 M",
+    "total_revenue": "$822 M",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 99,
+    "website": "https://www.map.org/",
+    "logo":"https://www.map.org/hubfs/Logos/MAP%20Intl%20Instagram%20Square%20Logo.png",
+    "mission_statements": "To provide medicines and health supplies to those in need around the world so they might experience life to the fullest"
+  },
+  {
+    "name": "Step Up for Students",
+    "category": "Education",
+    "private_donations": "$819 M",
+    "total_revenue": "$822 M",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 99,
+    "website": "https://www.stepupforstudents.org/",
+    "logo":"https://upload.wikimedia.org/wikipedia/commons/c/c0/Logo_su4s-header.png",
+    "mission_statements": "Empowers families to pursue and engage in the most appropriate learning options for their children"
+  }
+]

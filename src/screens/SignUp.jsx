@@ -56,7 +56,9 @@ const SignUp = (props) => {
   const { name, email, password, passwordConfirmation } = form
 
   return (
-    <div className='form-container'>
+    <div className='sign-up-in-form-container'>
+      <div className='sign-up-in-box'>
+
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
         <label>Name</label>
@@ -68,6 +70,7 @@ const SignUp = (props) => {
           placeholder='Enter Your Name'
           onChange={handleChange}
         />
+      
         <label>Email address</label>
         <input
           required
@@ -95,8 +98,10 @@ const SignUp = (props) => {
           placeholder='Confirm Password'
           onChange={handleChange}
         />
+        
         {renderError()}
       </form>
+      </div>
     </div>
   )
 }
