@@ -182,4 +182,64 @@
 .inputButtonContainer {
   display: flex;
   justify-content: center;
+
+
+  margin-bottom: 20px;
+}
+
+.browse-button button {
+  background-color: #e31b1b;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block; 
+  margin-right: 10px; 
+  cursor: pointer; 
+}
+
+.browse-button button:hover {
+  background-color: #830f0f; 
+}
+
+.form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://media.istockphoto.com/id/1324413691/photo/beautiful-sky-with-white-clouds.jpg?s=612x612&w=0&k=20&c=40a8JIoRJ1BAI4XeyEouZl0QbVAJToDBRQn31S3FGzk=');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+} 
+
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box {
+  background-color:white;
+  height: 49vh;
+  width: 45vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: medium;
+  border-radius: 30px;
+  border: 1px solid black;
+
+  
+}
+
+.form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
