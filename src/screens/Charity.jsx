@@ -54,12 +54,11 @@ export default function Charity(props) {
    <div className="charity-screen-full">
     <div className="charity-screen-grid">
 
-      <div className="charity-screen-top-parent">
-        <div className="charity-screen-image"> 
-          <img className={charity.name} src={charity.logo} alt="charity logo" />
-        </div> 
-        <h2>{charity.name}</h2>
-        <p>{charity.mission_statements}</p>
+      <div className="charity-screen-top-parent"> 
+      <img className={charity.name} src={charity.logo} alt="charity logo" />
+
+      <h2>{charity.name}</h2>
+      <p>{charity.mission_statements}</p>
       </div>
 
     <div className="left-parent">

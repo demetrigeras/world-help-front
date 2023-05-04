@@ -25,23 +25,26 @@ export default function Pledge(props) {
     }
 
     return (
-        <div className="pledge-log-container">{pledge?.email} has donated ${pledge?.amount}
+    <div className="pledge-log-container">
+        <div className="single-pledge-container">
+        {pledge?.email} has donated ${pledge?.amount}
         { user?.email === pledge?.email && 
           (<>
 
           <div className="inputButtonContainer">
             <form onSubmit={handleUpdate}>
-                <input type="text" placeholder="Enter your Amount" onChange={handleUpdateChange} />
-                <input className='button' type="submit" value="Update Pledge!" />
+                <input className="input-field" type="text" placeholder="Enter your Amount" onChange={handleUpdateChange} />
+                <input className='updateButton' type="submit" value="Update Pledge!" />
             </form>
 
             <form onSubmit={handleDelete}>
-                <input className='button' type="submit" value="Delete Pledge!" />
+                <input className='deleteButton' type="submit" value="Delete Pledge!" />
             </form>
         </div> 
 
         </>)
         }
         </div>
+    </div> 
     )
 }
