@@ -55,6 +55,7 @@ const SignIn = (props) => {
 
   return (
     <div className='form-container'>
+      <div className='box'>
       <h3>Sign In</h3>
       <form onSubmit={onSignIn}>
         <label>Email</label>
@@ -77,6 +78,7 @@ const SignIn = (props) => {
         />
         {renderError()}
       </form>
+      </div>
     </div>
   )
 }

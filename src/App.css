@@ -1,25 +1,61 @@
 
 .App {
   text-align: center;
-  background-image: cover;
   font-family: 'Oswald', sans-serif;
 }
-
-.homescreen, .header, .title {
-  background-image: url("https://cdn.wallpapersafari.com/71/23/jbFrIq.jpg");
-}
-
+/* Nav Bar stuff */
 .page-header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
+  background-color: #fefefe;
+  width: 100%;
+}
+
+.signInOut {
+  display: flex;
+}
+
+.home{
+  margin-right: 3%;
+  margin-left: 2%;
+}
+
+.signOut {
+  display: flex;
+  padding-left: 5%;
+}
+
+/* Nav bar stuff ends */
+.home-top-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0%;
+  background-image: url("http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg");
+  background-position: 25%;
+} 
+
+.title {
+  display: flex;
+  justify-content: center;
+  object-fit:contain ;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 25px;
+}
+
+.subTitle {
+  color: white;
+  font-size: 20px;
+  font-weight: 540;
 }
 
 .charities {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin-top: 3%;
+  margin-top: 0%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -36,115 +72,118 @@
   padding: 5%;
 }
 
-.world-help-logo {
-  width: 75px;
-  height: 75px;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  object-fit:contain ;
-}
-
-/* ------Charity.jsx------- */
-
-.charity-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 5px;
-  row-gap: 5px;
-  height: 100vh;
-  margin: 3%;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  grid-area: 1 / 1 / 2 / 2;
-  border: 1px solid black;
-}
-
-.image-container img {
-  width: 130px;
-  height: 130px;
-  align-items: center;
-  object-fit:contain;
-}
-
-.top-container {
-  border: 1px solid black;
-}
-
-.left-container {
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-}
-
-.right-container {
-  border: 1px solid black;
-  align-items: center;
-}
-
-.name-container { 
-  grid-area: 1 / 2 / 2 / 5;
-  border: 1px solid black; 
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
-
-}
-.left-container { 
-  display: flex;
-  grid-area: 2 / 1 / 4 / 2; 
-  border: 1px solid black; 
-}
-.right-top-container { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-area: 2 / 2 / 3 / 5;
-  border: 1px solid black; 
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
-
-}
-.right-bottom-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  grid-area: 3 / 2 / 4 / 5;
-  border: 1px solid black;  
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
-
-}
-
-.charityInfo {
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-p {
-  border: 1px solid black;
-  width: fit-content;
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+.logo-container:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
 }
 
 .browse-button {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
+}
+
+.browse-button button {
+  background-color: #e31b1b;
+  border: 1px solid white;
+  border-radius: 5%;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block; 
+  margin-right: 10px; 
+  cursor: pointer;
+   
+}
+
+.browse-button button:hover {
+  background-color: #b51515;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ------Charity.jsx------- */
+
+.charity-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+  height: 100vh;
+  margin: 3%;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.charity-screen-top-parent {
+  grid-area: 1 / 1 / 2 / 4;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  margin: 3%;
+
+}
+
+.charity-screen-top-parent img {
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  object-fit:contain;
+  padding: 5%;
+}
+
+.left-parent {
+  grid-area: 2 / 1 / 4 / 2;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 3%;
+}
+
+.pledge-log-container {
+  grid-area: 2 / 2 / 4 / 3;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 3%;
+  padding-top: 2%;
+}
+
+.Pledges {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 3%;;
+  padding: 3%;
+}
+
+.charityInfo {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 3%;
+}
+
+.pledge-log-container {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 3%;
+  contain: content;
+  display: flex;
+  flex-direction: column;
+}
+/* --------Pledge.jsx------- */
+
+.inputButtonContainer {
+  display: flex;
+  justify-content: center;
+
+
   margin-bottom: 20px;
 }
 
@@ -165,3 +204,42 @@ p {
   background-color: #830f0f; 
 }
 
+.form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://media.istockphoto.com/id/1324413691/photo/beautiful-sky-with-white-clouds.jpg?s=612x612&w=0&k=20&c=40a8JIoRJ1BAI4XeyEouZl0QbVAJToDBRQn31S3FGzk=');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+} 
+
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box {
+  background-color:white;
+  height: 49vh;
+  width: 45vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: medium;
+  border-radius: 30px;
+  border: 1px solid black;
+
+  
+}
+
+.form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
