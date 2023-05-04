@@ -8,8 +8,8 @@ export default function Home() {
   const [domesticOnly, setDomesticOnly] = useState(false);
   const [interOnly, setInterOnly] = useState(false);
   const [educateOnly, setEducateOnly] = useState(false);
-  const [youthOnly, setYouthOnly] = useState(false);  
-
+  const [youthOnly, setYouthOnly] = useState(false); 
+  
   const fetchCharities = async () => {
     const allCharities = await getCharities()
     setCharities(allCharities)
@@ -46,28 +46,31 @@ export default function Home() {
 
   return (
     <div className="homescreen">
-          <div className='title'>
-              <h1>World</h1>
-                <img className="world-help-logo" src="https://img.freepik.com/premium-vector/two-hands-with-heart-love-care-support-concept-giving-help-helping-hands-hand-reaching-out-help-give-hand-friendship-concept-flat-vector-isolated-white-background-blue-yellow-colors_683816-82.jpg" alt="world help logo" />
-              <h1>Help</h1>
-          </div>  
+      <div className='home-top-container'>
 
-          <p className="subheader">Click on any chairitable organization below to get more information!</p>
+            <div className="title">        
+              <h1>World Help</h1>
+                {/* <img className="world-help-logo" src="https://img.freepik.com/premium-vector/two-hands-with-heart-love-care-support-concept-giving-help-helping-hands-hand-reaching-out-help-give-hand-friendship-concept-flat-vector-isolated-white-background-blue-yellow-colors_683816-82.jpg" alt="world help logo" /> */}
+                {/* <h1>Help</h1> */}
+            </div>
+
+          <p className="subTitle">Click on any chairitable organization below to get more information!</p>
 
         <div className='browse-button'>
             <button onClick={handleDomestic}>
-              {domesticOnly? "Show All" : "Domestic Needs"}
+              {domesticOnly? "DOMESTIC NEEDS" : "Domestic Needs"}
             </button>
             <button onClick={handleInter}>
-              {interOnly ? "Show All" : "International Needs"}
+              {interOnly ? "INTERNATIONAL NEEDS" : "International Needs"}
             </button>
             <button onClick={handleEducate}>
-              {educateOnly ? "Show All" : "Education"}
+              {educateOnly ? "EDUCATION" : "Education"}
             </button>
             <button onClick={handleYouth}>
-              {youthOnly ? "Show All" : "Youth"}
+              {youthOnly ? "YOUTH" : "Youth"}
             </button>
         </div>
+      </div>  
 
         <div className="charities">
           {filteredList.map((charity) => (
@@ -77,16 +80,6 @@ export default function Home() {
     </div>
   )
 }
-
-//  const [category, setCategory] = useState("")
-
-//  const handleCategory = (e) => {
-//   setCategory(e.target.value)
-//  }
-
-//  const filteredList = allCharities.category.filter((charity) => charity.category = 
-//  {Category ? filteredList : something}
-//  )
 
 
 
