@@ -165,3 +165,22 @@ p {
   background-color: #830f0f; 
 }
 
+.form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://media.istockphoto.com/id/1324413691/photo/beautiful-sky-with-white-clouds.jpg?s=612x612&w=0&k=20&c=40a8JIoRJ1BAI4XeyEouZl0QbVAJToDBRQn31S3FGzk=');
+ background-repeat: no-repeat;
+ background-size: cover;
+
+  font-family: 'Roboto', sans-serif;
+} 
+
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

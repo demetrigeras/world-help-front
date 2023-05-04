@@ -68,6 +68,7 @@ const SignUp = (props) => {
           placeholder='Enter Your Name'
           onChange={handleChange}
         />
+      
         <label>Email address</label>
         <input
           required
@@ -95,6 +96,7 @@ const SignUp = (props) => {
           placeholder='Confirm Password'
           onChange={handleChange}
         />
+        
         {renderError()}
       </form>
     </div>
