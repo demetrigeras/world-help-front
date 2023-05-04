@@ -10,7 +10,7 @@ export default function Nav(props) {
           <NavLink to="/">Home </NavLink>
         </div>
 
-        {/* <div className="signInOut"> */}
+        
           {user ? (
             <>
               <div className="welcome-nav">Welcome Back! {user.name}</div>
