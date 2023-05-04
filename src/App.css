@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@500;600&display=swap');
 .App {
   text-align: center;
   font-family: 'Oswald', sans-serif;
@@ -6,25 +6,39 @@
 /* Nav Bar stuff */
 .page-header {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
-  background-color: #fefefe;
-  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Comme', sans-serif;
+  padding: 10px;
 }
 
 .signInOut {
   display: flex;
+  justify-content: flex-end;
 }
 
 .home{
-  margin-right: 3%;
-  margin-left: 2%;
+  display: flex;
+  justify-content: center;
 }
 
 .signOut {
   display: flex;
   padding-left: 5%;
+  justify-content: flex-end;
+  text-decoration: wrap;
+  white-space: nowrap;
 }
+.sign-up-nav {
+  display: flex;
+  margin-right: 10px;
+ 
+}
+.welcome-nav {
+  white-space: nowrap;
+}
+
 
 /* Nav bar stuff ends */
 .home-top-container {
@@ -34,6 +48,8 @@
   padding-bottom: 0%;
   background-image: url("http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg");
   background-position: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
 
 .title {
