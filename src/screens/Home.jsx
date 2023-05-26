@@ -75,8 +75,6 @@ export default function Home() {
 
             <div className="title">        
               <h1>World Help</h1>
-                {/* <img className="world-help-logo" src="https://img.freepik.com/premium-vector/two-hands-with-heart-love-care-support-concept-giving-help-helping-hands-hand-reaching-out-help-give-hand-friendship-concept-flat-vector-isolated-white-background-blue-yellow-colors_683816-82.jpg" alt="world help logo" /> */}
-                {/* <h1>Help</h1> */}
             </div>
 
           <p className="subTitle">Click on any chairitable organization below to get more information!</p>
