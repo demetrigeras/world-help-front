@@ -19,3 +19,12 @@ export const getCharity = async (id) => {
     throw error;
   }
 }
+
+export const createCharity = async (charity) => {
+  try {
+    const response = await api.post("/charity", charity);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

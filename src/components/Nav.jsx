@@ -13,7 +13,7 @@ export default function Nav(props) {
         
           {user ? (
             <>
-              <div className="welcome-nav">Welcome Back! {user.name}</div>
+              <div className="welcome-nav">Welcome! {user.name}</div>
               <div className="signOut">
                 <NavLink to="/sign-out">Sign Out</NavLink>
               </div>

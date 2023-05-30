@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Charity from "../components/Charity.jsx";
 import { getCharities } from "../services/charities.js";
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [charities, setCharities] = useState([])
@@ -55,6 +56,7 @@ export default function Home() {
     }
   }
 
+
   const filteredList = (domesticOnly || interOnly || educateOnly || youthOnly)
   ? charities.filter((charity) => 
   (domesticOnly && charity.category === "Domestic Needs") ||
@@ -69,6 +71,13 @@ export default function Home() {
   const [buttonThree, setButtonThree] = useState("rgb(73, 132, 241, 0.7");
   const [buttonFour, setButtonFour] = useState("rgb(73, 132, 241, 0.7");
 
+ 
+    const navigate = useNavigate();
+    
+    const handleAddCharity = () => {
+      navigate('/charity'); // Replace '/charity' with the desired URL of the new page
+    };
+  
   return (
     <div className="homescreen">
       <div className='home-top-container'>
@@ -77,7 +86,7 @@ export default function Home() {
               <h1>World Help</h1>
             </div>
 
-          <p className="subTitle">Click on any chairitable organization below to get more information!</p>
+          <p className="subTitle">Click on any chairitable organization below to make a pledge!</p>
 
         <div className='browse-button'>
             <button onClick={handleDomestic} style={{background: buttonOne}}>
@@ -93,6 +102,9 @@ export default function Home() {
               {youthOnly ? "Youth" : "Youth"}
             </button>
         </div>
+        <div className='AddCharitypage'>
+        <button onClick={handleAddCharity}>Add Charity</button>
+        </div>
       </div>  
 
         <div className="charities">
@@ -103,6 +115,8 @@ export default function Home() {
     </div>
   )
 }
+
+
 
 
 
