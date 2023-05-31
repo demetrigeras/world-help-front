@@ -58,7 +58,7 @@ export default function Charity(props) {
       <img className={charity.name} src={charity.logo} alt="charity logo" />
 
       <h2>{charity.name}</h2>
-      <p>Mission Statement: {charity.mission_statements}</p>
+      <p>Mission Statement:{charity.mission_statements}</p>
       </div>
 
     <div className="left-parent">
