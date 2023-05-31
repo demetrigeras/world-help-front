@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { getCharities, createCharity } from '../services/charities';
+import { getCharities,createCharity } from '../services/charities';
 import Charity from '../components/Charity';
 import { useNavigate } from 'react-router-dom';
 
 export function AddCharity() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [newLogo, setNewLogo] = useState('');
+  const [toggle, setToggle] = useState(false)
   const [charityData, setCharityData] = useState({
     name: '',
     category: '',
     private_donations: '',
     total_revenue: '',
-    fundraising_efficiency: '',
-    charitable_commitment: '',
+    fundraising_efficiency: Number,
+    charitable_commitment: Number,
     logo: '',
     website: '',
     mission_statements: '',
   });
+  
 
   useEffect(() => {
     fetchCharities();
-  }, []);
+  }, [toggle]);
 
   const fetchCharities = async () => {
     const allCharities = await getCharities();
@@ -38,34 +39,44 @@ export function AddCharity() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await createCharity(charityData);
-      if (response.ok) {
-        const data = await response.json();
-        setNewLogo(data.logo);
-        console.log('Data inserted successfully.');
+    console.log(charityData)
+    await createCharity(charityData)
+    console.log("test")
+    setNewLogo(charityData.logo);
+    setToggle(prev => !prev)
+    navigate(`/charity`);
+  }
 
-        fetchCharities();
+//     try {
+//         console.log('Request Payload:', charityData);
+//       const response = await createCharity(charityData);
+//       if (response.ok) {
+//         const data = await response.json();
+//         setNewLogo(data.logo);
+//         console.log('Data inserted successfully.');
 
-        setCharityData({
-          name: '',
-          category: '',
-          private_donations: '',
-          total_revenue: '',
-          fundraising_efficiency: '',
-          charitable_commitment: '',
-          logo: '',
-          website: '',
-          mission_statements: '',
-        });
-        navigate(`/charity/charity`);
-      } else {
-        console.error('Failed to insert data.');
-      }
-    } catch (error) {
-      console.error('Error inserting data:', error);
-    }
-  };
+//         fetchCharities();
+       
+//         setCharityData({
+//           name: '',
+//           category: '',
+//           private_donations: '',
+//           total_revenue: '',
+//           fundraising_efficiency: Number,
+//           charitable_commitment: Number,
+//           logo: '',
+//           website: '',
+//           mission_statements: '',
+//         });
+//         setToggle(prev => !prev)
+//         navigate(`/charitys`);
+//       } else {
+//         console.error('Failed to insert data.');
+//       }
+//     } catch (error) {
+//       console.error('Error inserting data:', error);
+//     }
+//   };
 
   const [charities, setCharities] = useState([]);
 
@@ -73,7 +84,7 @@ export function AddCharity() {
     <div>
       <h1>Add Charity</h1>
       <div className="addingCharities">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} value="Charity!">
           <label>
             Name:
             <input type="text" name="name" value={charityData.name} onChange={handleChange} />
