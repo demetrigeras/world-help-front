@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCharities,createCharity } from '../services/charities';
+import { getCharities, createCharity } from '../services/charities';
 import Charity from '../components/Charity';
 import { useNavigate } from 'react-router-dom';
 
@@ -44,39 +44,39 @@ export function AddCharity() {
     console.log("test")
     setNewLogo(charityData.logo);
     setToggle(prev => !prev)
-    navigate(`/charity`);
+    navigate('/charity/addchar');
   }
 
-//     try {
-//         console.log('Request Payload:', charityData);
-//       const response = await createCharity(charityData);
-//       if (response.ok) {
-//         const data = await response.json();
-//         setNewLogo(data.logo);
-//         console.log('Data inserted successfully.');
+  //   try {
+  //       console.log('Request Payload:', charityData);
+  //     const response = await createCharity(charityData);
+  //     if (response.ok) {
+  //       const data = await response.json();
+  //       setNewLogo(data.logo);
+  //       console.log('Data inserted successfully.');
 
-//         fetchCharities();
+  //       fetchCharities();
        
-//         setCharityData({
-//           name: '',
-//           category: '',
-//           private_donations: '',
-//           total_revenue: '',
-//           fundraising_efficiency: Number,
-//           charitable_commitment: Number,
-//           logo: '',
-//           website: '',
-//           mission_statements: '',
-//         });
-//         setToggle(prev => !prev)
-//         navigate(`/charitys`);
-//       } else {
-//         console.error('Failed to insert data.');
-//       }
-//     } catch (error) {
-//       console.error('Error inserting data:', error);
-//     }
-//   };
+  //       setCharityData({
+  //         name: '',
+  //         category: '',
+  //         private_donations: '',
+  //         total_revenue: '',
+  //         fundraising_efficiency: Number,
+  //         charitable_commitment: Number,
+  //         logo: '',
+  //         website: '',
+  //         mission_statements: '',
+  //       });
+  //       setToggle(prev => !prev)
+  //       navigate('addchar');
+  //     } else {
+  //       console.error('Failed to insert data.');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error inserting data:', error);
+  //   }
+  // };
 
   const [charities, setCharities] = useState([]);
 
@@ -153,10 +153,9 @@ export function AddCharity() {
           <Charity key={charity.id} charity={charity} />
         ))}
       </div>
-      {newLogo && (
+      {newLogo  && (
         <div className="newLogo">
-          <h2>New Logo</h2>
-          <img src={newLogo} alt="New Logo" />
+           Charity Added
         </div>
       )}
     </div>

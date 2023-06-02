@@ -22,7 +22,7 @@ export const getCharity = async (id) => {
 
 export const createCharity = async (charity) => {
   try {
-    const response = await api.post("/charity", charity);
+    const response = await api.post("/charity/addchar", charity);
     return response.data;
   } catch (error) {
     throw error;

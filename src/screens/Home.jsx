@@ -75,7 +75,7 @@ export default function Home() {
     const navigate = useNavigate();
     
     const handleAddCharity = () => {
-      navigate('/charity'); // Replace '/charity' with the desired URL of the new page
+      navigate('/charity/addchar'); // Replace '/charity' with the desired URL of the new page
     }; 
   
   return (
