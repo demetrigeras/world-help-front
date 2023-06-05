@@ -23,6 +23,12 @@
   justify-content: center;
 }
 
+/* .homescreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
 .signOut {
   display: flex;
   padding-left: 5%;
@@ -74,11 +80,17 @@
   gap: 10px;
   margin-top: 0%;
   background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-items: center;
 }
 
 .grid-container {
   display: flex;
+  height: 150px;
+  width: 150px;
   justify-content: center;
+  /* align-items: center; */
+  object-fit: contain;
 }
 
 .logo-container img {
@@ -421,4 +433,44 @@
   padding: 10px;
 
 }
+
+.formchar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.formchar input{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.formchar label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.AddCharitypage {
+  color: white ;
+  font-size: 20px;
+}
+  .addcharbutton{
+  padding: 3px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  touch-action: manipulation;
+  margin-left: 3px;
+  
+}
+
 

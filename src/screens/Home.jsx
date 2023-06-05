@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Charity from "../components/Charity.jsx";
 import { getCharities } from "../services/charities.js";
 import { useNavigate } from 'react-router-dom';
+import Modal from 'react-modal';
+import AddCharity from "./addCharity.jsx";
+
 
 export default function Home() {
   const [charities, setCharities] = useState([])
+  const [showModal, setShowModal] = useState(false);
 
   const [domesticOnly, setDomesticOnly] = useState(false);
   const [interOnly, setInterOnly] = useState(false);
@@ -72,11 +76,17 @@ export default function Home() {
   const [buttonFour, setButtonFour] = useState("rgb(73, 132, 241, 0.7");
 
  
-    const navigate = useNavigate();
-    
-    const handleAddCharity = () => {
-      navigate('/charity/addchar'); // Replace '/charity' with the desired URL of the new page
-    }; 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleAddCharity = () => {
+    openModal();
+  };
   
   return (
     <div className="homescreen">
@@ -102,21 +112,26 @@ export default function Home() {
               {youthOnly ? "Youth" : "Youth"}
             </button>
         </div>
+        
         <div className='AddCharitypage'>
-        <button onClick={handleAddCharity}>Add Charity</button>
-        </div>
-      </div>  
-
-        <div className="charities">
-          {filteredList.map((charity) => (
-            <Charity key={charity._id} charity={charity} />
-          ))}
-        </div>
+  Click here to add a Charity!
+  <button className='addcharbutton' onClick={handleAddCharity}>Add Charity</button>
+  {/* <button onClick={openModal}>Add Charity</button> */}
+</div>
+</div>
+      <div className="charities">
+        {filteredList.map((charity) => (
+          <Charity key={charity._id} charity={charity} />
+        ))}
+      </div>
+      <Modal
+        isOpen={showModal}
+        onRequestClose={closeModal}
+        contentLabel="Add Charity Modal"
+      >
+        <AddCharity closeModal={closeModal} />
+      </Modal>
     </div>
-  )
+  );
 }
-
-
-
-
 

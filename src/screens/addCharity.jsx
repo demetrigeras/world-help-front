@@ -81,12 +81,14 @@ export function AddCharity() {
   const [charities, setCharities] = useState([]);
 
   return (
-    <div>
-      <h1>Add Charity</h1>
+    <div className="addcharities">
+      <h1>Add your Charity here!</h1>
+      <p>Please provide the necessary details in the input fields below to create a profile for the charity or organization.</p>
+      {/* <div className='mamaddchar'> */}
       <div className="addingCharities">
-        <form onSubmit={handleSubmit} value="Charity!">
+        <form className='formchar'  onSubmit={handleSubmit} value="Charity!">
           <label>
-            Name:
+            Name of Charity:
             <input type="text" name="name" value={charityData.name} onChange={handleChange} />
           </label>
           <label>
@@ -94,7 +96,7 @@ export function AddCharity() {
             <input type="text" name="category" value={charityData.category} onChange={handleChange} />
           </label>
           <label>
-            Private Donations:
+            Private Donations from vendors:
             <input
               type="text"
               name="private_donations"
@@ -149,15 +151,13 @@ export function AddCharity() {
         </form>
       </div>
       <div className="addcharity">
-        {charities.map((charity) => (
-          <Charity key={charity.id} charity={charity} />
-        ))}
-      </div>
-      {newLogo  && (
-        <div className="newLogo">
-           Charity Added
-        </div>
-      )}
+  {newLogo && (
+    <div className="newLogo">
+      <img className='grid-container' src={newLogo} alt="New Charity Logo" />
+      <p>Charity Added</p>
+    </div>
+  )}
+</div>
     </div>
   );
 }
