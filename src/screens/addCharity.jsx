@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { getCharities, createCharity } from '../services/charities';
-import Charity from '../components/Charity';
 import { useNavigate } from 'react-router-dom';
 
 export function AddCharity() {
@@ -43,6 +42,9 @@ export function AddCharity() {
     await createCharity(charityData)
     console.log("test")
     setNewLogo(charityData.logo);
+    setInterval(function() {
+      window.location.reload();
+    }, 1000);
     
   }
 
