@@ -52,7 +52,7 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 1.5%;
-  background-image: url("http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg");
+  background-image: url "http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg";
   background-position: 25%;
   background-repeat: no-repeat;
   background-size: cover;
