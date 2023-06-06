@@ -128,6 +128,13 @@ export default function Home() {
         isOpen={showModal}
         onRequestClose={closeModal}
         contentLabel="Add Charity Modal"
+        style={{
+          content: {
+            width: '800px', // Specify the desired width
+            height: '600px', // Specify the desired height
+            margin: 'auto' // Center the modal horizontally
+          }
+        }}
       >
         <AddCharity closeModal={closeModal} />
       </Modal>

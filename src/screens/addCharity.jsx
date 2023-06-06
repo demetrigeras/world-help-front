@@ -43,8 +43,7 @@ export function AddCharity() {
     await createCharity(charityData)
     console.log("test")
     setNewLogo(charityData.logo);
-    setToggle(prev => !prev)
-    navigate('/charity/addchar');
+    
   }
 
   //   try {
@@ -82,79 +81,109 @@ export function AddCharity() {
 
   return (
     <div className="addcharities">
-      <h1>Add your Charity here!</h1>
-      <p>Please provide the necessary details in the input fields below to create a profile for the charity or organization.</p>
-      {/* <div className='mamaddchar'> */}
+      <h1 className='htmladdchar'>Add your Charity here!</h1>
+      <div className="instructionsadd">
+      <p>Please provide the necessary details in the input fields below to add your charity.</p>
+     </div>
       <div className="addingCharities">
-        <form className='formchar'  onSubmit={handleSubmit} value="Charity!">
-          <label>
-            Name of Charity:
-            <input type="text" name="name" value={charityData.name} onChange={handleChange} />
+        <form className='formchar' onSubmit={handleSubmit} value="Charity!">
+        <div className='fpart4inputs'>
+          <label> 
+            <div className='textschar'>
+              
+            <div>Name:</div>
+           
+           <input type="text" name="name" value={charityData.name} onChange={handleChange}  />
+           </div>
           </label>
           <label>
-            Category:
+          <div className='textschar'>
+          <div> Category:</div>
             <input type="text" name="category" value={charityData.category} onChange={handleChange} />
+            </div>
           </label>
           <label>
-            Private Donations from vendors:
+          <div className='textschar'>
+          <div>Private Donations:</div>
             <input
               type="text"
               name="private_donations"
               value={charityData.private_donations}
               onChange={handleChange}
             />
+            </div>
           </label>
+         
           <label>
-            Total Revenue:
+          <div className='textschar'>
+            <div>Total Revenue:</div>
             <input
               type="text"
               name="total_revenue"
               value={charityData.total_revenue}
               onChange={handleChange}
             />
+            
+            </div>
           </label>
+          </div>
+          <div className='spart4inputs'>
           <label>
-            Fundraising Efficiency:
+          <div className='textschar'>
+           <div>Fundraising Efficiency:</div>
             <input
               type="number"
               name="fundraising_efficiency"
               value={charityData.fundraising_efficiency}
               onChange={handleChange}
             />
+            </div>
           </label>
+          
           <label>
-            Charitable Commitment:
+          <div className='textschar'>
+            <div>Charitable Commitment:</div>
             <input
               type="number"
               name="charitable_commitment"
               value={charityData.charitable_commitment}
               onChange={handleChange}
             />
+            </div>
           </label>
           <label>
-            Logo:
+          <div className='textschar'>
+            <div>Logo:</div>
             <input type="text" name="logo" value={charityData.logo} onChange={handleChange} />
+            </div>
           </label>
           <label>
-            Website:
+          <div className='textschar'>
+          <div>Website:</div>
             <input type="text" name="website" value={charityData.website} onChange={handleChange} />
+            </div>
           </label>
+          </div>
           <label>
-            Mission Statements:
-            <textarea
+          
+            <div>Mission Statements:</div>
+            <textarea className='textarea'
               name="mission_statements"
               value={charityData.mission_statements}
               onChange={handleChange}
             />
+            
           </label>
-          <button type="submit">Submit</button>
+          <button className='addcharbut' type="submit">Submit</button>
         </form>
       </div>
       <div className="addcharity">
   {newLogo && (
     <div className="newLogo">
       <img className='grid-container' src={newLogo} alt="New Charity Logo" />
-      <p>Charity Added</p>
+      <div className='textCharAdded'>
+        Charity Added!
+        </div>
     </div>
   )}
 </div>

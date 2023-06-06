@@ -52,7 +52,7 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 1.5%;
-  background-image: url("http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg");
+  /* background-image: url("http://www.vsocanada.org/wp-content/uploads/sites/19/2020/03/volunteering-australia-people-linked-together.jpg"); */
   background-position: 25%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -439,11 +439,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 
 }
 .formchar input{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 
@@ -455,11 +456,14 @@
   align-items: center;
   flex-direction: column;
 
+
 }
 
 .AddCharitypage {
   color: white ;
   font-size: 20px;
+  padding-bottom: 20px;
+
 }
   .addcharbutton{
   padding: 3px 10px;
@@ -473,4 +477,80 @@
   
 }
 
+.htmladdchar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.textarea{
+  height: 100px;
+  width: 450px;
+  margin: 5px;
+}
+
+.textschar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.textschar div {
+  width: 100px; /* Adjust the width of the label container as needed */
+  margin-right: 10px; /* Adjust the spacing between label and input field as needed */
+}
+
+.textschar input,
+.textschar textarea {
+  flex: 1;
+  padding: 5px;
+}
+.addcharbut{
+  
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;
+    background-color: #f7fafa;
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+  
+
+}
+
+.fpart4inputs{
+  margin-right: 300px;
+}
+.spart4inputs{
+  margin-left: 300px;
+  margin-top: -175px;
+
+}
+.textCharAdded{
+  margin-right: 25px;
+  
+}
+
+.instructionsadd{
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+
+}
