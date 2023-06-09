@@ -156,7 +156,7 @@ export function AddCharity() {
           <label>
           <div className='textschar'>
             <div>Logo:</div>
-            <input type="text" name="logo" value={charityData.logo} onChange={handleChange} />
+            <input type="text" name="logo" value={charityData.logo} required={true} onChange={handleChange} />
             </div>
           </label>
           <label>

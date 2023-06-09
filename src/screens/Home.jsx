@@ -131,7 +131,7 @@ export default function Home() {
         style={{
           content: {
             width: '800px', // Specify the desired width
-            height: '600px', // Specify the desired height
+            height: '615px', // Specify the desired height
             margin: 'auto' // Center the modal horizontally
           }
         }}

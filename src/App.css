@@ -483,18 +483,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .textarea{
   height: 100px;
   width: 450px;
   margin: 5px;
+  
 }
 
 .textschar {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8.5px;
+  font-weight: bold;
+  
 }
 
 .textschar div {
@@ -506,6 +510,7 @@
 .textschar textarea {
   flex: 1;
   padding: 5px;
+  background-color: pink;
 }
 .addcharbut{
   
@@ -539,6 +544,7 @@
 
 .fpart4inputs{
   margin-right: 350px;
+ 
   
 }
 .spart4inputs{
@@ -548,6 +554,7 @@
 }
 .textCharAdded{
   margin-right: 25px;
+  font-size: 20px;
   
 }
 
@@ -555,6 +562,9 @@
   display: flex;
   justify-content: center;
   margin-top: -25px;
+  font-weight: bold;
+  font-size: 18px;
 
 }
+
 
