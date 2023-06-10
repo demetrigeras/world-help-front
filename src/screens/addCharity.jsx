@@ -38,7 +38,6 @@ export function AddCharity() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(charityData)
     await createCharity(charityData)
     console.log("test")
     setNewLogo(charityData.logo);
