@@ -39,7 +39,6 @@ export function AddCharity() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createCharity(charityData)
-    console.log("test")
     setNewLogo(charityData.logo);
     setInterval(function() {
       window.location.reload();
