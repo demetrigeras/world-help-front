@@ -46,36 +46,6 @@ export function AddCharity() {
   
   }
 
-  //   try {
-  //       console.log('Request Payload:', charityData);
-  //     const response = await createCharity(charityData);
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setNewLogo(data.logo);
-  //       console.log('Data inserted successfully.');
-
-  //       fetchCharities();
-       
-  //       setCharityData({
-  //         name: '',
-  //         category: '',
-  //         private_donations: '',
-  //         total_revenue: '',
-  //         fundraising_efficiency: Number,
-  //         charitable_commitment: Number,
-  //         logo: '',
-  //         website: '',
-  //         mission_statements: '',
-  //       });
-  //       setToggle(prev => !prev)
-  //       navigate('addchar');
-  //     } else {
-  //       console.error('Failed to insert data.');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error inserting data:', error);
-  //   }
-  // };
 
   const [charities, setCharities] = useState([]);
 
@@ -165,8 +135,9 @@ export function AddCharity() {
           </label>
           </div>
           <label>
-          
-            <div>Mission Statements:</div>
+          <div className='missionchars'>
+            <div>Mission Statement:</div>
+            </div>
             <textarea className='textarea'
               name="mission_statements"
               value={charityData.mission_statements}
@@ -174,9 +145,13 @@ export function AddCharity() {
             />
             
           </label>
+          
           <button className='addcharbut' type="submit">Submit</button>
+          
         </form>
+        
       </div>
+      
       <div className="addcharity">
   {newLogo && (
     <div className="newLogo">
