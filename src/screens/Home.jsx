@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
 import AddCharity from "./addCharity.jsx";
 
+Modal.setAppElement('#root') 
 
 export default function Home() {
   const [charities, setCharities] = useState([])

@@ -11,8 +11,8 @@ export function AddCharity() {
     category: '',
     private_donations: '',
     total_revenue: '',
-    fundraising_efficiency: Number,
-    charitable_commitment: Number,
+    fundraising_efficiency: "",
+    charitable_commitment: "",
     logo: '',
     website: '',
     mission_statements: '',
@@ -40,10 +40,10 @@ export function AddCharity() {
     e.preventDefault();
     await createCharity(charityData)
     setNewLogo(charityData.logo);
-    setInterval(function() {
+    setTimeout(() => {
       window.location.reload();
     }, 1000);
-    
+  
   }
 
   //   try {
