@@ -385,7 +385,7 @@
 
 
 .sign-up-in-form-container {
-  height: 100vh;
+  height: 82vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -444,7 +444,7 @@
 }
 .sign-up-in-box {
   background-color:white;
-  height: 49vh;
+  height: 60vh;
   width: 45vh;
   flex-direction: column;
   display: flex;
