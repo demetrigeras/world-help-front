@@ -160,7 +160,7 @@
  flex-direction: column;
  justify-content: center;
  font-family: 'Fira Sans', sans-serif;
- 
+ align-content: center;
  
 }
 
@@ -281,17 +281,33 @@
   
   
 } 
-.Pledges {
+/* .Pledges {
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-family: 'Fira Sans', sans-serif;
   font-size: larger;
   position: absolute;
-  margin-left: 550px;
   margin-top: -50px;
+  
+} */
+.Pledges {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: larger;
+  top: 100%;
+  margin-top: -370px;
 }
-
+.Pledges .charity-screen-full{
+  display: flex;
+  justify-content: center;
+}
 
 .pledge-log-container .pledge-log-text{
   margin-right: 80px;
