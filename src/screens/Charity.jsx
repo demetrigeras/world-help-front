@@ -56,45 +56,82 @@ export default function Charity(props) {
 
       <div className="charity-screen-top-parent"> 
       <img className={charity.name} src={charity.logo} alt="charity logo" />
-
+      <div className='chartitle'>
       <h2>{charity.name}</h2>
-      <p>Mission Statement:{charity.mission_statements}</p>
       </div>
-
+      <div className='charmiss'>
+      <h3>Mission Statement:</h3>
+        <p>{charity.mission_statements}</p>
+       </div>
+      </div>
+    
     <div className="left-parent">
         <div className='Pledges'>
-
-          <header>Make a pledge!</header>
             {user ? (
-              <form onSubmit={(e) => handleSubmit(e)}>
+              <form  onSubmit={(e) => handleSubmit(e)}>
+                <h2>Make a pledge!</h2>
                 <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
-                <input type="submit" value="Pledge!" />
-              </form>
+                <button type="submit">Pledge!</button>
+                <p>Make your pledge a reality and donate! <br />
+          <a href={charity.website}>{charity.website}</a>
+          </p>
+          <h3>All Pledges to {charity.name}</h3>
+          <div>{filteredPledges.map((pledge) => (
+          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges} setToggle={setToggle}/>
+        ))}
+       </div>
+          </form>
+              
              )
              :
              (
-              <div>Sign up or sign in to make a pledge!</div>
+              <div className='Pledgesgosh'>
+              <h3>Sign up or sign in to make a pledge!</h3>
+              <div>&nbsp;</div>
+              <p>Make your pledge a reality and donate! <br />
+          <a href={charity.website}>{charity.website}</a>
+          </p>
+              </div>
+            
              )
             }
+            
        </div>
+        
+       
         <div className='charityInfo'>
+         
+          <h3>Charity Information</h3>
           <p>Cause: {charity.category}</p>
           <p>Private Donations: {charity.private_donations}</p>
           <p>Total Revenue: {charity.total_revenue}</p>
           <p>Fundrising Efficiency: {charity.fundraising_efficiency}%</p>
           <p>Charitable Commitments: {charity.charitable_commitment}%</p>
-          <p>Click below to donate!<br />
-          <a href={charity.website}>{charity.website}</a>
-          </p>
-        </div>
+          </div>
     </div>
-
+            
        <div className="pledge-log-container">
-        <div>Pledge Log</div>
-        <div>{filteredPledges.map((pledge) => (
-          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges} setToggle={setToggle}/>
-        ))}
+       <div className="pledge-log-text">
+       <h3>Your Pledges</h3>
        </div>
+  <div>
+    {filteredPledges.map((pledge) => (
+      <>
+        {user?.email === pledge.email ? (
+          <Pledge
+            key={pledge._id}
+            user={user}
+            pledge={pledge}
+            function={fetchPledges}
+            setToggle={setToggle}
+            showButtons={true} // Add this prop to enable buttons for user's pledges
+          />
+        ) : null}
+      </>
+    ))}
+  </div>
+
+
       </div>
   </div>
 </div> 

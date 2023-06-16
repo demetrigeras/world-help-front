@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comme:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 .App {
   text-align: center;
   font-family: 'Oswald', sans-serif;
@@ -58,6 +59,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 35vh;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: larger;
 } 
 
 .title {
@@ -66,13 +69,14 @@
   object-fit:contain ;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .subTitle {
   color: white;
   font-size: 20px;
   font-weight: 540;
+  font-size: 25px;
 }
 
 
@@ -135,31 +139,6 @@
 
 
 /* ------Charity.jsx------- */
-
-.charity-screen-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 3px;
-  row-gap: 5px;
-  height: 100vh;
-  margin: 3%;
-  background-color: rgb(255, 255, 255, 0.5);
-  border-radius: 8px;
-  margin-top: 5px;
-}
-
-.charity-screen-top-parent {
-  grid-area: 1 / 1 / 2 / 4;
-  border: 1px solid black;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  object-fit: contain;
-}
-
 .charity-screen-top-parent img {
   display: flex;
   justify-content: center;
@@ -168,46 +147,177 @@
   align-items: center;
   object-fit:contain;
 }
-
-.left-parent {
-  grid-area: 2 / 1 / 4 / 2;
-  border: 1px solid black;
+.charity-screen-top-parent {
   border-radius: 8px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 3%;
+  object-fit: contain;
+}
+ .charity-screen-full {
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ font-family: 'Fira Sans', sans-serif;
+ 
+ 
 }
 
-.pledge-log-container {
-  grid-area: 2 / 2 / 4 / 3;
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 3%;
-  padding-top: 2%;
+.Pledges input{
+  flex: 1;
+  padding: 7px;
 }
+.Pledges button  {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 14px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
 
-.Pledges {
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 3%;;
-  padding: 3%;
 }
+.pledge-log-container .updateButton  {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 14px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
 
+}
+.pledge-log-container .deleteButton  {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 14px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+
+}
 .charityInfo {
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-top: 60px;
+  font-size: larger;
+  line-height: 8px;
+  
+  
+} 
+.Pledges {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: larger;
+  position: absolute;
+  margin-left: 550px;
+  margin-top: -50px;
+}
+
+
+.pledge-log-container .pledge-log-text{
+  margin-right: 80px;
 }
 
 .pledge-log-container {
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 3%;
-  contain: content;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  margin-right: 100px;
+  margin-top: -280px;
+  line-height: 23px;
+  font-size: larger;
+
 }
+.pledge-log-container input{
+  flex: 1;
+  padding: 5px;
+}
+
+.pledge-log-container .Pledges .charityInfo{
+  display: flex;
+  flex-direction: column; 
+  position: absolute;
+}
+
 
 /* --------Pledge.jsx------- */
 
@@ -224,7 +334,7 @@
 /* media queries */
 
 /* laptop screen */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .charity-screen-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -240,7 +350,7 @@
   
   .charity-screen-top-parent {
     grid-area: 1 / 1 / 2 / 4;
-    border: 1px solid black;
+    
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -258,7 +368,7 @@
   
   .left-parent {
     grid-area: 2 / 1 / 4 / 2;
-    border: 1px solid black;
+    
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -268,15 +378,12 @@
   
   .pledge-log-container {
     grid-area: 2 / 2 / 4 / 3;
-    border: 1px solid black;
     border-radius: 8px;
     margin: 3%;
     padding-top: 2%;
   }
   
   .Pledges {
-    border: 1px solid black;
-    border-radius: 8px;
     margin: 3%;;
     padding: 3%;
   }
@@ -288,12 +395,58 @@
   }
   
   .pledge-log-container {
-    border: 1px solid black;
+   
     border-radius: 8px;
     margin: 3%;
     contain: content;
     display: flex;
     flex-direction: column;
+  }
+} */
+/* Media Queries */
+
+/* Phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .charityInfo {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: medium;
+  }
+
+  .Pledges {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .pledge-log-container {
+    margin-right: 20px;
+    margin-top: -200px;
+    font-size: medium;
+  }
+}
+
+/* Laptops and desktops (768px and above) */
+@media only screen and (min-width: 768px) {
+  /* No specific changes, keep the default styles */
+}
+
+/* iPads (768px - 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .charityInfo {
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: larger;
+  }
+
+  .Pledges {
+    margin-left: 150px;
+    margin-top: -80px;
+  }
+
+  .pledge-log-container {
+    margin-right: 50px;
+    margin-top: -320px;
+    font-size: larger;
   }
 }
 /* phone screen */
@@ -382,8 +535,8 @@
   }
 }
 }
-
-
+/* 
+----------------End of media-queries */
 .sign-up-in-form-container {
   height: 82vh;
   display: flex;
@@ -502,6 +655,7 @@
   color: white ;
   font-size: 20px;
   padding-bottom: 20px;
+  font-size: 22px;
 
 }
   .addcharbutton{

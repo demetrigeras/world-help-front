@@ -3,7 +3,7 @@ import { updatePledge, deletePledge } from '../services/pledges.js';
 
 
 export default function Pledge(props) {
-    const {pledge, user, setToggle} = props
+    const {pledge, user, setToggle,showButtons} = props
     const [pledgeUpdate, setUpdatePledge] = useState("")
 
     const handleUpdateChange = (e) => {
@@ -25,26 +25,30 @@ export default function Pledge(props) {
     }
 
     return (
-    <div className="pledge-log-container">
+     
         <div className="single-pledge-container">
-        {pledge?.email} has donated ${pledge?.amount}
-        { user?.email === pledge?.email && 
-          (<>
-
+        {pledge?.email} has pledged ${pledge?.amount}
+        {showButtons && (
           <div className="inputButtonContainer">
             <form onSubmit={handleUpdate}>
-                <input className="input-field" type="text" placeholder="Enter your Amount" onChange={handleUpdateChange} />
-                <input className='updateButton' type="submit" value="Update Pledge!" />
+              <input
+                className="input-field"
+                type="text"
+                placeholder="Enter your Amount"
+                onChange={handleUpdateChange}
+              />
+              <button className="updateButton" type="submit">
+              <span>Edit</span>
+              </button>
             </form>
-
+  
             <form onSubmit={handleDelete}>
-                <input className='deleteButton' type="submit" value="Delete Pledge!" />
+            <button className="deleteButton" type="submit">
+  <span>Delete</span>
+</button>
             </form>
-        </div> 
-
-        </>)
-        }
-        </div>
-    </div> 
-    )
-}
+          </div>
+        )}
+      </div>
+    );
+  }
